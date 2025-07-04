@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>3D MediMakers</title>
+
+  <!--  Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!--  Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+
+  <!--  Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;900&display=swap" rel="stylesheet"/>
+
+  <!--  Tu CSS personalizado -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="#home" class="logo">
+                 <img src="https://i.postimg.cc/vB763HHP/Sin-t-tulo-1-copia-pdf.png" >
+                3D MediMakers
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#store">Store</a></li>
+                    <li><a href="#about">About us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="login-btn" id="loginBtn">Login</button>
+                <div class="cart-icon" id="cartIcon">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>3D Printed Medical Innovation</h1>
+                    <p>High-precision anatomical models for education, simulation, and surgical planning.</p>
+                    <div class="hero-buttons">
+                        <a href="#store" class="btn btn-primary">See catalog <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#store" class="btn btn-secondary">Learn more</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://i.postimg.cc/4dsV1RjB/Dise-o-sin-t-tulo-8.png" alt="3D Printer creating a brain">
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                      <h2>Why choose our models?</h2>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="icon"><i class="fa-solid fa-ruler-combined"></i></div>
+                        <h3>Anatomical precision</h3>
+                        <p>Grade models from real medical images with precise anatomical details</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <h3>Educational value</h3>
+                        <p>Perfect for medical teaching allowing students to interact with realistic replicas</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon"><i class="fa-solid fa-wrench"></i></div>
+                        <h3>Personalization</h3>
+                        <p>Possibility of customizing models according to specific needs for simulations or planning</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section products" id="store">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Products</h2>
+                    <p>Discover our selection of high quality 3D printed anatomical models for medical education and surgical simulation</p>
+                </div>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <img src="https://i.postimg.cc/d16tPb3H/Dise-o-sin-t-tulo-3.png" alt="Anatomical Heart Model">
+                        <h3>Heart</h3>
+                        <p class="description">The 3D model of the heart measures approximately 12 centimeters high, 8 centimeters wide, and 6 centimeters deep.</p>
+                        <div class="price">$20.99</div>
+                        <button class="add-to-cart" data-id="1" data-name="Heart Model" data-price="299.99">
+                            <i class="fa-solid fa-cart-plus"></i> Add
+                        </button>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://i.postimg.cc/R0fN8pwy/Dise-o-sin-t-tulo-2.png" alt="Anatomical Brain Model">
+                        <h3>Brain</h3>
+                        <p class="description">The 3D brain model measures 15 centimeters long, 12 centimeters wide, and 10 centimeters high.</p>
+                        <div class="price">$22.99</div>
+                        <button class="add-to-cart" data-id="2" data-name="Brain Model" data-price="349.99">
+                            <i class="fa-solid fa-cart-plus"></i> Add
+                        </button>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://i.postimg.cc/0jrxgrLj/Dise-o-sin-t-tulo-4.png" alt="Anatomical Kidney Model">
+                        <h3>Kidney</h3>
+                        <p class="description">Each kidney measures about 11 centimeters long, 6 centimeters wide, and 4 centimeters thick in the 3D model.</p>
+                        <div class="price">$20.99</div>
+                        <button class="add-to-cart" data-id="3" data-name="Kidney Model" data-price="299.99">
+                            <i class="fa-solid fa-cart-plus"></i> Add
+                        </button>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://i.postimg.cc/yYvQgvgM/Dise-o-sin-t-tulo-5.png" alt="Anatomical Lungs Model">
+                        <h3>Lungs</h3>
+                        <p class="description">Each lung in the 3D model measures about 20 centimeters high, 12 centimeters wide, and 8 centimeters deep.</p>
+                        <div class="price">$20.99</div>
+                        <button class="add-to-cart" data-id="4" data-name="Lungs Model" data-price="349.99">
+                           <i class="fa-solid fa-cart-plus"></i> Add
+                        </button>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://i.postimg.cc/qMm1tpxh/Dise-o-sin-t-tulo-removebg-preview.png" alt="Anatomical Liver Model">
+                        <h3>Liver</h3>
+                        <p class="description">Each Liver in the 3D model measures about 20 centimeters high, 12 centimeters wide, and 8 centimeters deep.</p>
+                        <div class="price">$22.99</div>
+                        <button class="add-to-cart" data-id="4" data-name="Lungs Model" data-price="349.99">
+                           <i class="fa-solid fa-cart-plus"></i> Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section about-us" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2>About us</h2>
+                </div>
+                <div class="about-us-content">
+                    <div class="about-us-text">
+                        <h3>Our Mission</h3>
+                        <p>At 3D MediMaker, we are dedicated to revolutionizing medical education and surgical simulation through 3D printing technology. We create accurate and accessible anatomical models that help students, educators, and medical professionals improve their knowledge and skills.</p>
+                        <br>
+                        <h3>Medical Innovation</h3>
+                        <p>We use the latest 3D printing and digital modeling technologies to create high-fidelity anatomical replicas. Our team of designers and engineers works closely with medical professionals to ensure the anatomical accuracy of each model.</p>
+                    </div>
+                    <div class="about-us-visual">
+                         <div class="about-us-points">
+                              <div class="point">
+                                   <div class="icon"><i class="fa-solid fa-check"></i></div>
+                                   <div class="text">
+                                        <h4>Anatomical Precision</h4>
+                                        <p>All our models are anatomically accurate and based on real medical data.</p>
+                                   </div>
+                              </div>
+                              <div class="point">
+                                   <div class="icon"><i class="fa-solid fa-users"></i></div>
+                                   <div class="text">
+                                        <h4>Multidisciplinary Team</h4>
+                                        <p>Our team includes 3D designers, engineers, and medical advisors.</p>
+                                   </div>
+                              </div>
+                              <div class="point">
+                                   <div class="icon"><i class="fa-solid fa-award"></i></div>
+                                   <div class="text">
+                                        <h4>Quality Guarantee</h4>
+                                        <p>Each model undergoes rigorous quality controls before being sent.</p>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <section class="section" id="contact">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <h2>Contact information</h2>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="info-text">
+                                <h3>Email</h3>
+                                <p>3dmedimakers@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <div class="info-text">
+                                <h3>Business Hours</h3>
+                                <p>Monday to Friday: 9:00 AM - 6:00 PM</p>
+                                <p>Saturday: 10:00 AM - 2:00 PM</p>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form-card">
+                        <h2>Send us a message</h2>
+                        <form action="#" method="POST">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="form-email">Email</label>
+                                <input type="email" id="form-email" name="email" placeholder="Your gmail address" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="affair">Affair</label>
+                                <input type="text" id="affair" name="affair" placeholder="Subject of the message" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary-action">Send message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!--  Login Modal -->
+  <div class="modal-overlay" id="loginModal">
+    <div class="modal-content">
+      <span class="modal-close" id="closeModal">&times;</span>
+      <h2>Log In</h2>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="correo@ejemplo.com"/>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="********"/>
+      </div>
+      <div class="form-options">
+        <div class="remember-me">
+          <input type="checkbox" id="remember"/>
+          <label for="remember">Remind me</label>
+        </div>
+        <a href="#">Forgot your password?</a>
+      </div>
+      <button class="form-submit-btn">Enter</button>
+      <div class="modal-footer-text">
+       Don't you have an account? <a href="#">sign up</a>
+      </div>
+    </div>
+  </div>
+
+  <!--  Carrito Modal -->
+  <div class="modal-overlay" id="cartModal">
+    <div class="modal-content">
+      <span class="modal-close" id="closeCartModal">&times;</span>
+      <h2>Your cart</h2>
+      <div id="cartEmptyMessage" class="cart-empty">Your cart is empety.</div>
+      <div id="cartContent" class="cart-product-list"></div>
+
+      <div class="cart-summary">
+        <div class="summary-line">
+          <span>Subtotal</span>
+          <span id="cartSubtotal">$0.00</span>
+        </div>
+        <div class="summary-total">
+          <span>Total</span>
+          <span id="cartTotal">$0.00</span>
+        </div>
+      </div>
+
+      <div class="cart-actions">
+        <button id="continueShoppingBtn" class="btn btn-secondary">Seguir Comprando</button>
+        <button id="checkoutBtn" class="btn btn-primary-action">Proceder al Pago</button>
+      </div>
+    </div>
+  </div>
+
+  <!--  SecciÃ³n de Pago (oculta al inicio) -->
+  <section id="paymentSection" class="payment-methods" style="display: none;">
+    <div class="container">
+      <div class="payment-header">
+        <h2>Payment Methods</h2>
+      </div>
+      <div class="payment-tabs">
+        <button class="tab-btn active" data-tab="tab1"><i class="fa-solid fa-qrcode"></i> QR</button>
+        <button class="tab-btn" data-tab="tab2"><i class="fa-solid fa-money-bill"></i> Efectivo</button>
+      </div>
+
+      <div class="payment-content active" id="tab1">
+        <h4>Pay by QR</h4>
+        <p>Scan this code with your banking app and notify your purchase.</p>
+         <div class="qr-code-placeholder"></div>
+      </div>
+
+      <div class="payment-content" id="tab2">
+        <h4>Pay by cash on delivery</h4>
+        <p>Please complete the next form</p>
+        <div class="qr"></div>
+      </div>
+    </div>
+  </section>
+
+  <!--  Pie de PÃ¡gina -->
+  <footer class="main-footer">
+    <p>&copy; 2025 3D MediMakers. All rights reserved.</p>
+  </footer>
+
+  <!--  Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!--  Tu archivo JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
