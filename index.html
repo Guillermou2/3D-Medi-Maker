@@ -2,231 +2,84 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>3D MediMakers - Modelos Anatómicos 3D para Educación Médica</title>
-
-  <!-- Bootstrap CSS (CDN) -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-  <!-- FontAwesome CDN -->
-  <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    rel="stylesheet"
-  />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D MediMakers</title>
+  <link rel="shortcut icon" href="img/icon.png" type="image/png">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Google Fonts: Poppins -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
-    rel="stylesheet"
-  />
-
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="estilos.css" />
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="main-header sticky-top">
-    <div class="container d-flex justify-content-between align-items-center">
-      <a href="#" class="logo d-flex align-items-center">
-        <img src="logo3dmedimakers.png" alt="3D MediMakers Logo" />
-        <span class="ms-2 fs-3 fw-bold text-light">3D MediMakers</span>
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="container">
+      <a href="#" class="logo">
+        <img src="img/icon.png" alt="Logo" />
+        3D MediMakers
       </a>
-
-      <nav class="main-nav d-flex align-items-center">
-        <ul class="nav">
-          <li class="nav-item"><a href="#features" class="nav-link">Características</a></li>
-          <li class="nav-item"><a href="#products" class="nav-link">Productos</a></li>
-          <li class="nav-item"><a href="#about-us" class="nav-link">Nosotros</a></li>
-          <li class="nav-item"><a href="#payment" class="nav-link">Pagos</a></li>
-          <li class="nav-item"><a href="#contact" class="nav-link">Contacto</a></li>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
-
-      <div class="header-actions d-flex align-items-center">
-        <button class="login-btn btn btn-outline-light" id="loginBtn">Iniciar Sesión</button>
-        <div class="cart-icon position-relative ms-3" id="cartIcon" role="button" aria-label="Carrito de compras" tabindex="0">
-          <i class="fas fa-shopping-cart fa-lg"></i>
-          <span id="cartCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">0</span>
+      <div class="header-actions">
+        <button class="login-btn" onclick="openLoginModal()">Iniciar Sesión</button>
+        <div class="cart-icon" onclick="toggleCart()">
+          <i class="bi bi-cart-fill"></i>
+          <div class="cart-count" id="cart-count">0</div>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+  <!-- HERO SECTION -->
+  <section class="hero" id="inicio">
+    <div class="container">
       <div class="hero-content">
-        <h1>Modelos Anatómicos 3D para Educación Médica</h1>
-        <p class="lead">Innovación en aprendizaje con impresiones 3D de alta calidad para estudiantes y profesionales de la salud.</p>
+        <h1>Modelos anatómicos en 3D para educación médica</h1>
+        <p>Explora nuestra colección de modelos anatómicos impresos en 3D, diseñados para estudiantes y profesionales de la salud.</p>
         <div class="hero-buttons">
-          <a href="#products" class="btn btn-primary btn-lg me-3">Ver Productos</a>
-          <a href="#contact" class="btn btn-outline-light btn-lg">Contáctanos</a>
+          <a href="#productos" class="btn btn-primary">Ver Productos</a>
+          <a href="#contacto" class="btn btn-secondary">Contáctanos</a>
         </div>
       </div>
       <div class="hero-image">
-        <img src="modelo-anatomico-3d.png" alt="Modelo Anatómico 3D" />
+        <img src="img/hero-img.png" alt="Modelos anatómicos" />
       </div>
     </div>
   </section>
 
-  <!-- Features Section -->
-  <section id="features" class="section bg-secondary text-light text-center">
+  <!-- PRODUCTS -->
+  <section class="section products" id="productos">
     <div class="container">
-      <h2>Características</h2>
-      <p>Por qué elegir nuestros modelos anatómicos impresos en 3D</p>
-
-      <div class="row g-4 justify-content-center mt-5">
-        <div class="col-md-4 feature-card p-4 bg-light text-dark rounded shadow-sm">
-          <i class="fas fa-dna fa-3x mb-3 text-primary"></i>
-          <h3>Alta Precisión</h3>
-          <p>Modelos detallados basados en escaneos médicos reales.</p>
-        </div>
-        <div class="col-md-4 feature-card p-4 bg-light text-dark rounded shadow-sm">
-          <i class="fas fa-cogs fa-3x mb-3 text-primary"></i>
-          <h3>Materiales Duraderos</h3>
-          <p>Impresiones en materiales resistentes y seguros para uso educativo.</p>
-        </div>
-        <div class="col-md-4 feature-card p-4 bg-light text-dark rounded shadow-sm">
-          <i class="fas fa-chalkboard-teacher fa-3x mb-3 text-primary"></i>
-          <h3>Fácil de Usar</h3>
-          <p>Modelos diseñados para facilitar la enseñanza y el aprendizaje.</p>
-        </div>
+      <div class="section-header">
+        <h2>Nuestros Productos</h2>
+        <p>Modelos anatómicos detallados impresos en 3D</p>
+      </div>
+      <div class="products-grid" id="product-list">
+        <!-- Aquí se inyectan dinámicamente los productos desde JS -->
       </div>
     </div>
   </section>
 
-  <!-- Products Section -->
-  <section id="products" class="section products">
+  <!-- ABOUT US -->
+  <section class="section" id="nosotros">
     <div class="container">
-      <h2 class="text-light text-center mb-5">Nuestros Productos</h2>
-      <div class="products-grid row g-4">
-        <!-- Ejemplo producto -->
-        <div class="col-md-4 product-card text-center">
-          <img src="producto1.png" alt="Modelo Cráneo Humano" class="mb-3" />
-          <h3>Modelo Cráneo Humano</h3>
-          <p class="description">Impresión 3D detallada del cráneo humano para estudios anatómicos.</p>
-          <div class="price">$45.00</div>
-          <button class="add-to-cart btn btn-secondary">
-            <i class="fas fa-cart-plus"></i> Añadir al Carrito
-          </button>
-        </div>
-        <!-- Repite productos similares -->
+      <div class="section-header">
+        <h2>Quiénes Somos</h2>
+        <p>Comprometidos con la educación médica accesible</p>
       </div>
-    </div>
-  </section>
+      <div class="about-us-content">
+        <div class="about-us-text">
+          <h3>Innovación educativa en salud</h3>
+          <p>Somos un equipo apa
 
-  <!-- About Us Section -->
-  <section id="about-us" class="section bg-secondary text-light">
-    <div class="container about-us-content">
-      <div class="about-us-text">
-        <h3>Sobre Nosotros</h3>
-        <p>3D MediMakers es un proyecto innovador dedicado a la creación de modelos anatómicos en impresión 3D para apoyar la educación médica en Latinoamérica.</p>
-        <p>Nuestro equipo está formado por profesionales comprometidos con la calidad y la enseñanza efectiva.</p>
-      </div>
-      <div class="about-us-visual text-center">
-        <img src="equipo-3dmedimakers.png" alt="Equipo 3D MediMakers" />
-      </div>
-    </div>
-  </section>
-
-  <!-- Payment Methods Section -->
-  <section id="payment" class="section payment-methods text-center">
-    <div class="container">
-      <div class="payment-header mb-4">
-        <h2>Métodos de Pago</h2>
-      </div>
-      <div class="payment-tabs d-flex justify-content-center mb-4" role="tablist">
-        <button class="tab-btn active btn btn-light me-2" data-tab="paypal" role="tab" aria-selected="true" aria-controls="paypal-tab" id="paypal-tab-btn">PayPal</button>
-        <button class="tab-btn btn btn-light" data-tab="transfer" role="tab" aria-selected="false" aria-controls="transfer-tab" id="transfer-tab-btn">Transferencia</button>
-      </div>
-      <div id="paypal" class="payment-content active" role="tabpanel" aria-labelledby="paypal-tab-btn">
-        <h4>Pago vía PayPal</h4>
-        <p>Paga rápida y fácilmente con tu cuenta PayPal o tarjeta de crédito.</p>
-        <div class="qr-code-placeholder"></div>
-      </div>
-      <div id="transfer" class="payment-content d-none" role="tabpanel" aria-labelledby="transfer-tab-btn">
-        <h4>Transferencia Bancaria</h4>
-        <p>Transfiere directamente a nuestra cuenta bancaria:</p>
-        <ul class="list-unstyled">
-          <li>Banco: Banco Ejemplo</li>
-          <li>Cuenta: 123456789</li>
-          <li>Nombre: 3D MediMakers S.A.</li>
-        </ul>
-        <div class="qr"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="section bg-secondary text-light">
-    <div class="container contact-wrapper">
-      <div class="contact-info">
-        <h2>Contáctanos</h2>
-        <div class="info-item">
-          <div class="info-icon"><i class="fas fa-phone"></i></div>
-          <div class="info-text">
-            <h3>Teléfono</h3>
-            <p>+503 1234 5678</p>
-          </div>
-        </div>
-        <div class="info-item">
-          <div class="info-icon"><i class="fas fa-envelope"></i></div>
-          <div class="info-text">
-            <h3>Email</h3>
-            <p>contacto@3dmedimakers.com</p>
-          </div>
-        </div>
-        <div class="info-item">
-          <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
-          <div class="info-text">
-            <h3>Dirección</h3>
-            <p>Av. Principal #123, San Salvador, El Salvador</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="contact-form-card">
-        <h2>Envía un Mensaje</h2>
-        <form id="contactForm">
-          <label for="name">Nombre</label>
-          <input type="text" id="name" name="name" required />
-
-          <label for="email">Correo Electrónico</label>
-          <input type="email" id="email" name="email" required />
-
-          <label for="message">Mensaje</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-
-          <button type="submit" class="btn btn-primary btn-primary-action">Enviar</button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Login Modal -->
-  <div class="modal-overlay" id="loginModal" aria-hidden="true" role="dialog" aria-labelledby="loginTitle" aria-modal="true">
-    <div class="modal-content">
-      <button class="modal-close" id="closeLogin" aria-label="Cerrar">&times;</button>
-      <h2 id="loginTitle">Iniciar Sesión</h2>
-      <form id="loginForm" novalidate>
-        <div class="mb-3">
-          <label for="loginEmail" class="form-label">Correo Electrónico</label>
-          <input type="email" class="form-control" id="loginEmail" required />
-        </div>
-        <div class="mb-3">
-          <label for="loginPassword" class="form-label">Contraseña</label>
-          <input type="password" class="form-control" id="loginPassword" required />
-        </div>
-        <button type="submit" class="btn btn-primary btn-primary-action w-100">Entrar</button>
-      </form>
-    </div>
-  </div>
-
-  <!-- Bootstrap JS Bundle (Popper + Bootstrap JS) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Custom JS -->
-  <script src="app.js"></script>
-</body>
-</html>
